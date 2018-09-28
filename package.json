@@ -1,0 +1,20 @@
+{
+  "name": "vuepress-plugin-server-push",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "vuepress-server-push": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Eko Eryanto <ekoeryanto@gmail.com> (https://eryanto.net)",
+  "license": "MIT",
+  "dependencies": {
+    "deepmerge": "^2.1.1",
+    "glob": "^7.1.3",
+    "minimist": "^1.2.0"
+  }
+}
