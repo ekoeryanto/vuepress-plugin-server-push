@@ -1,10 +1,10 @@
 {
   "name": "vuepress-plugin-server-push",
   "version": "0.0.1",
-  "description": "",
+  "description": "HTTP Server Push header generator for Vuepress.",
   "main": "index.js",
   "bin": {
-    "vuepress-server-push": "index.js"
+    "vuepress-server-push": "cli.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
