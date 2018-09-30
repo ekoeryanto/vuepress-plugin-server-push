@@ -1,4 +1,4 @@
-# Netlify Plugin Server Push
+# Vuepress Plugin Server Push
 
 Server push links generator for vuepress.
 
