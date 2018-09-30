@@ -1,6 +1,6 @@
 {
   "name": "vuepress-plugin-server-push",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "HTTP Server Push header generator for Vuepress.",
   "main": "index.js",
   "bin": {
