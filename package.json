@@ -18,7 +18,6 @@
   "author": "Eko Eryanto <ekoeryanto@gmail.com> (https://eryanto.net)",
   "license": "MIT",
   "dependencies": {
-    "deepmerge": "^2.1.1",
-    "globby": "^8.0.1"
+    "server-push-generator": "^0.0.2"
   }
 }

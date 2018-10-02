@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 const path = require('path')
 const fs = require('fs')
-const crawl = require('./crawler')
+const spg = require('server-push-generator')
+
 const transform = require('./transformer')
 
 const args = process.argv.slice(2);
@@ -15,20 +16,20 @@ if (!fs.existsSync(dest)) {
   process.exit(1)
 }
 
-const isNetlify = args.find(a => a === '-n' || a === '--netlify')
+const isFirebase = args.some(a => a === '-f' || a === '--firebase')
 
-crawl({ dest })
+spg({ cwd: dest, ignore: ['404.html'] })
   .then(headers => {
     // default to netlify headers
-    if (isNetlify) {
-      const targeFile = path.resolve(dest, '_headers')
-      console.log('creating netlify headers file');
-      transform.netlify(headers, targeFile)
-      console.log(`created: ${targeFile}`);
-    } else {
+    if (isFirebase) {
       const firebaseJsonFile = path.resolve('firebase.json')
       console.log('updating firebase config file');
       transform.firebase(headers, firebaseJsonFile)
       console.log(`updated: ${firebaseJsonFile}`);
+    } else {
+      const targeFile = path.resolve(dest, '_headers')
+      console.log('creating netlify headers file');
+      transform.netlify(headers, targeFile)
+      console.log(`created: ${targeFile}`);
     }
   })
