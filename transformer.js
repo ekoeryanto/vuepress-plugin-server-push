@@ -2,7 +2,7 @@ const fs = require('fs');
 
 module.exports.netlify = (headers, headersFile) => {
   const netlifyHeader = headers.map(
-    (source, headers) => `${source}\n\tLink: ${headers}`
+    ({source, headers}) => `${source}\n\tLink: ${headers}`
   );
   fs.appendFileSync(headersFile, '\n' + netlifyHeader.join('\n'));
 };
