@@ -15,6 +15,10 @@
     "server-push",
     "http2"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ekoeryanto/vuepress-plugin-server-push.git"
+  },
   "author": "Eko Eryanto <ekoeryanto@gmail.com> (https://eryanto.net)",
   "license": "MIT",
   "dependencies": {
