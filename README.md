@@ -19,7 +19,7 @@ const path = require('path')
 module.exports = {
   plugins: [
     ['server-push', {
-      firebase: path.resolve('../firebase.json')
+      firebase: path.resolve('../firebase.json'),
       netlify: '_headers' // only file name
     }]
   ]
